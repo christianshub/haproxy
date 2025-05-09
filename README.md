@@ -1,8 +1,16 @@
-# VM provisioning
+# HA Proxy setup
 
-## Installation
+## VM provision through Terraform
 
 ```bash
+cd terraform-provision-haproxy
 terraform init -upgrade
 terraform apply -parallelism=1 -lock=false
+```
+
+## HA Proxy config
+
+```bash
+cd ansible-config-haproxy
+ansible-playbook -i inventory.ini playbooks/haproxy.yaml
 ```
