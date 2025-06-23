@@ -42,6 +42,5 @@ resource "proxmox_vm_qemu" "haproxy" {
   agent = 1
   onboot = true
 
-  # Assign a static IP
   ipconfig0 = "ip=192.168.0.100/24,gw=192.168.0.1"
 }
