@@ -14,3 +14,7 @@ terraform apply -parallelism=1 -lock=false
 cd ansible-config-haproxy
 ansible-playbook -i inventory.ini playbooks/haproxy.yaml
 ```
+
+## ⚠️ Important Notes
+
+* After the VMs has been created its often possible to make the IP static through your routers network settings 
